@@ -3,8 +3,8 @@ from argparse import ArgumentParser
 from pathlib import Path
 
 
-HOST = "localhost"
-PORT = 61433
+HOST = "192.168.1.11"
+PORT = 80
 
 
 def handle_client(conn: socket.socket, args):
@@ -16,6 +16,8 @@ def handle_client(conn: socket.socket, args):
     else:
         with open(args.file, "rb") as f:
             conn.sendfile(f)
+
+        input("Press Enter to exit:")
         conn.close()
 
 def server_create():
