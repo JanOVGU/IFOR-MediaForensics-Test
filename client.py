@@ -3,8 +3,8 @@ from argparse import ArgumentParser
 from pathlib import Path
 
 
-HOST = "localhost"
-PORT = 61433
+HOST = "192.168.1.11"
+PORT = 80
 
 def client_execute_input(s: socket.socket) -> None:
     while True:
