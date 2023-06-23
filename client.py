@@ -33,6 +33,7 @@ def main():
             client_execute_input(s)
         else:
             client_execute_file(s, args.file)
+        input("Press Enter to exit:")
 
 if __name__ == "__main__":
     main()
